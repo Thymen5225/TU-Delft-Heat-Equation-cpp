@@ -188,13 +188,8 @@ operator*(const Matrix<T> &lhs,
     for (int i = 0; i < rows; i++) {
         result_type sum = 0;
         for (int j = 0; j < cols; j++) {
-//            Vector<result_type> vec_from_col(rows);
-//            for (int k = 0; k < cols; k++){
-//                vec_from_col[k] = lhs({i, j});
-//            }
             double aa = lhs({i, j});
-//            sum += aa * rhs[j];
-            sum += 1;
+            sum += aa * rhs[j];
         }
         result[i] = sum;
     }
